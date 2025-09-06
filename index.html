@@ -71,6 +71,7 @@
 
         .book {
             display: flex;
+            flex-direction: row;
             transform-style: preserve-3d;
             animation: openBook 2s ease forwards;
         }
@@ -89,6 +90,16 @@
             100% {
                 transform: rotateY(0deg);
                 opacity: 1;
+            }
+        }
+
+        /* Mobile view: show one card/page at a time */
+        @media (max-width: 768px) {
+            .book {
+                flex-direction: column;
+            }
+            .page {
+                margin: 0 0 1rem 0 !important;
             }
         }
     </style>
@@ -164,7 +175,7 @@
             <section class="mt-10 fade-in">
                 <h2 class="text-xl md:text-2xl font-bold text-center mb-4 bounce">🌸 Special Birthday Picture 🌸</h2>
                 <div class="flex justify-center">
-                    <img src="img.png" alt="Birthday Image" class="rounded-2xl shadow-lg w-full max-w-2xl" />
+                    <img src="Screenshot 2025-09-06 225053.png" alt="Birthday Image" class="rounded-2xl shadow-lg w-full max-w-2xl" />
                 </div>
             </section>
         </div>
